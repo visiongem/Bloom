@@ -91,7 +91,7 @@ fun BottomBar() {
                     Icon(painter = painterResource(id = it.resId), contentDescription = null, modifier = Modifier.size(24.dp))
                 },
                 label = {
-                    Text(text = it.name, style = caption, color = gray)
+                    Text(text = it.name, style = MaterialTheme.typography.caption, color = gray)
                 }
             )
         }
@@ -116,7 +116,7 @@ fun SearchBar() {
                 )
             },
             placeholder = {
-                Text(text = "Search", style = body1, color = gray)
+                Text(text = "Search", style = MaterialTheme.typography.body1, color = gray)
             },
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 backgroundColor = white,
@@ -132,7 +132,7 @@ fun BloomRowBanner() {
     Column {
         Box(modifier = Modifier.fillMaxWidth()) {
             Text(
-                text = "Browse Themes", style = h1, color = gray, modifier = Modifier
+                text = "Browse Themes", style = MaterialTheme.typography.h1, color = gray, modifier = Modifier
                     .fillMaxWidth()
                     .paddingFromBaseline(top = 32.dp)
             )
@@ -170,7 +170,7 @@ fun PlantCard(plant: ImageItem) {
                     .fillMaxWidth()
             ) {
                 Text(
-                    text = plant.name, style = h2, color = gray, modifier = Modifier
+                    text = plant.name, style = MaterialTheme.typography.h2, color = gray, modifier = Modifier
                         .wrapContentWidth()
                         .paddingFromBaseline(top = 24.dp, bottom = 16.dp)
                         .align(Alignment.Center)
@@ -184,7 +184,7 @@ fun PlantCard(plant: ImageItem) {
 fun BloomInfoList() {
     Column {
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            Text(text = "Design your home garden", style = h1, color = gray, modifier = Modifier.paddingFromBaseline(top = 40.dp))
+            Text(text = "Design your home garden", style = MaterialTheme.typography.h1, color = gray, modifier = Modifier.paddingFromBaseline(top = 40.dp))
             Icon(
                 painter = painterResource(id = R.drawable.ic_filter_list), contentDescription = "filter", modifier = Modifier
                     .padding(top = 24.dp)
@@ -218,8 +218,8 @@ fun DesignCard(plant: ImageItem) {
         Column {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Column {
-                    Text(text = plant.name, style = h2, color = gray, modifier = Modifier.paddingFromBaseline(top = 24.dp))
-                    Text(text = "This is a description", style = body1, color = gray, modifier = Modifier)
+                    Text(text = plant.name, style = MaterialTheme.typography.h2, color = gray, modifier = Modifier.paddingFromBaseline(top = 24.dp))
+                    Text(text = "This is a description", style = MaterialTheme.typography.body1, color = gray, modifier = Modifier)
                 }
                 Checkbox(checked = false, onCheckedChange = {}, colors = CheckboxDefaults.colors(checkmarkColor = white))
             }

@@ -2,10 +2,7 @@ package com.yn.bloom.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -44,7 +41,7 @@ fun LoginTitle() {
         modifier = Modifier
             .fillMaxWidth()
             .paddingFromBaseline(top = 184.dp, bottom = 16.dp),
-        style = h1,
+        style = MaterialTheme.typography.h1,
         color = gray,
         textAlign = TextAlign.Center
     )
@@ -69,7 +66,7 @@ fun LoginTextFiled(placeHolder: String) {
             .height(56.dp)
             .clip(Shapes.small),
         placeholder = {
-            Text(text = "$placeHolder", style = body1, color = gray)
+            Text(text = "$placeHolder", style = MaterialTheme.typography.body1, color = gray)
         }
     )
 }
@@ -91,11 +88,11 @@ fun TopText() {
         var keywordPre = "By Clicking below you agree to our".split(" ")
         var keywordPost = "and consent".split(" ")
         for (word in keywordPre) {
-            Text(text = word, style = body2, color = gray)
+            Text(text = word, style = MaterialTheme.typography.body2, color = gray)
         }
-        Text(text = "Terms of Use", style = body2, color = gray, textDecoration = TextDecoration.Underline)
+        Text(text = "Terms of Use", style = MaterialTheme.typography.body2, color = gray, textDecoration = TextDecoration.Underline)
         for (word in keywordPost) {
-            Text(text = word, style = body2, color = gray)
+            Text(text = word, style = MaterialTheme.typography.body2, color = MaterialTheme.colors.onPrimary)
         }
     }
 }
@@ -106,8 +103,8 @@ fun BottomText() {
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.Center
     ) {
-        Text(text = "to Our ", style = body2, color = gray)
-        Text(text = "Privacy Policy.", style = body2, color = gray, textDecoration = TextDecoration.Underline)
+        Text(text = "to Our ", style = MaterialTheme.typography.body2, color = gray)
+        Text(text = "Privacy Policy.", style = MaterialTheme.typography.body2, color = gray, textDecoration = TextDecoration.Underline)
     }
 }
 
@@ -120,6 +117,6 @@ fun LoginButton() {
             .fillMaxWidth()
             .clip(Shapes.medium), colors = ButtonDefaults.buttonColors(backgroundColor = pink900)
     ) {
-        Text(text = "Login", style = button, color = white)
+        Text(text = "Login", style = MaterialTheme.typography.button, color = white)
     }
 }

@@ -3,10 +3,7 @@ package com.yn.bloom.ui
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Text
-import androidx.compose.material.TextButton
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -88,7 +85,7 @@ fun WelcomeTitle() {
             Text(
                 text = "Beautiful home garden solutions",
                 textAlign = TextAlign.Center,
-                style = subtitle1,
+                style = MaterialTheme.typography.subtitle1,
                 color = gray
             )
         }
@@ -112,7 +109,7 @@ fun WelcomeButtons() {
         ) {
             Text(
                 text = "Create account",
-                style = button,
+                style = MaterialTheme.typography.button,
                 color = white
             )
         }
@@ -121,7 +118,7 @@ fun WelcomeButtons() {
         TextButton(onClick = { /*TODO*/ }) {
             Text(
                 text = "Login",
-                style = button,
+                style = MaterialTheme.typography.button,
                 color = pink900
             )
         }
