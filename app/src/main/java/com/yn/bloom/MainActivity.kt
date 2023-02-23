@@ -8,6 +8,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.darkColors
 import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.yn.bloom.navigation.SetupNavGraph
 import com.yn.bloom.ui.LoginPage
 import com.yn.bloom.ui.theme.BloomTheme
 
@@ -16,10 +18,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             BloomTheme {
-                // A surface container using the 'background' color from the theme
+               /* // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
                     LoginPage()
-                }
+                }*/
+                val navController = rememberNavController()
+                SetupNavGraph(navController = navController)
             }
         }
     }
